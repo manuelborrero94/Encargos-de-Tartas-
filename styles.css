@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(120deg, #f0f0f0, #e0f7fa);
+    background: linear-gradient(120deg, #f8f3eb, #f0e5de);
     margin: 0;
     padding: 0;
     color: #444;
@@ -12,15 +12,15 @@ body {
     margin: 40px auto;
     background: #ffffff;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+h1, h2 {
     text-align: center;
-    color: #2c3e50;
-    font-size: 32px;
-    margin-bottom: 40px;
+    color: #2d3e50;
+    font-weight: 600;
+    margin-bottom: 30px;
 }
 
 .form-group {
@@ -29,34 +29,35 @@ h1 {
 
 label {
     display: block;
-    font-weight: 600;
-    color: #34495e;
+    font-weight: 500;
+    color: #5a5a5a;
     margin-bottom: 10px;
 }
 
-input[type="text"], input[type="number"], input[type="date"], input[type="tel"], select, textarea {
+input[type="text"], input[type="number"], input[type="date"], input[type="tel"], select, textarea, input[type="file"], input[type="password"] {
     width: 100%;
     padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
     box-sizing: border-box;
     font-size: 16px;
     transition: all 0.3s ease;
 }
 
-input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="tel"]:focus, select:focus, textarea:focus {
-    border-color: #3498db;
+input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="tel"]:focus, select:focus, textarea:focus, input[type="password"]:focus {
+    border-color: #a8d5e2;
     outline: none;
-    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 10px rgba(168, 213, 226, 0.3);
 }
 
 button {
     width: 100%;
     padding: 15px;
-    background-color: #3498db;
+    background-color: #a8d5e2;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
@@ -65,7 +66,7 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #86c2cf;
     transform: scale(1.05);
 }
 
@@ -74,21 +75,63 @@ button:hover {
 }
 
 .order {
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
     padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 12px;
     margin-bottom: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .order p {
     margin: 10px 0;
-    color: #555;
+    color: #5a5a5a;
     font-size: 16px;
 }
 
 .order p strong {
-    color: #2c3e50;
+    color: #2d3e50;
     font-weight: 600;
+}
+
+/* Estilo para el selector de fecha */
+input[type="date"] {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: #444;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);
+}
+
+/* Estilo para los links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para mensajes de error o éxito */
+.alert {
+    margin-top: 15px;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #76c7c0;
+}
+
+.alert-error {
+    background-color: #e74c3c;
 }
